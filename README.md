@@ -17,11 +17,7 @@ standards, e.g., ISO 26262.
 
 ## How to Build, Test, Install, and Use
 
-To try system modes in your ROS 2 system, two pull request / patches need to be applied to your local ROS 2 installation to add information on the source node to parameter events:
-* rcl_interfaces [pull request 51](https://github.com/ros2/rcl_interfaces/pull/51) ([patch](https://github.com/ros2/rcl_interfaces/pull/51.patch))
-* rclcpp [pull request 584](https://github.com/ros2/rclcpp/pull/584) ([patch](https://github.com/ros2/rclcpp/pull/584.patch))
-
-After you clone this repository into your ROS 2 src folder and applied these two patches, you may build and install the [system_modes](./system_modes/) package and the [system_modes_examples](./system_modes_examples/) package:  
+After you cloned this repository into your ROS 2 workspace folder, you may build and install the [system_modes](./system_modes/) package and the [system_modes_examples](./system_modes_examples/) package using colcon:  
 $ `colcon build --packages-select-regex system_modes`
 
 Have a look at the [system_modes_examples](./system_modes_examples/) documentation to try your installation.
@@ -38,7 +34,6 @@ see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
 Please notice the following issues/limitations:
 
-* Currently, this package depends on [rcl_interfaces pull request 51](https://github.com/ros2/rcl_interfaces/pull/51) and [rclcpp pull request 584](https://github.com/ros2/rclcpp/pull/584).
 * Currently, (sub-)systems managed by the mode manager are not recognized by the `ros2 lifecycle` tool (*"Node not found"*). So to trigger lifecycle transitions in (sub-)systems, you have to go with the `ros2 service call` tool. Check the [system_modes_examples](./system_modes_examples/) documentation for example calls.
 
 ## Acknowledgments
