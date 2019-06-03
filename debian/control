@@ -1,0 +1,12 @@
+Source: ros-crystal-system-modes
+Section: misc
+Priority: extra
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-crystal-ament-cmake, ros-crystal-ament-cmake-cppcheck, ros-crystal-ament-cmake-cpplint, ros-crystal-ament-cmake-flake8, ros-crystal-ament-cmake-gmock, ros-crystal-ament-cmake-gtest, ros-crystal-ament-cmake-pep257, ros-crystal-ament-cmake-ros, ros-crystal-ament-cmake-uncrustify, ros-crystal-ament-lint-auto, ros-crystal-builtin-interfaces, ros-crystal-rclcpp, ros-crystal-rclcpp-lifecycle, ros-crystal-rosidl-default-generators, ros-crystal-std-msgs, ros-crystal-ros-workspace, ros-crystal-rmw-connext-cpp, ros-crystal-rmw-fastrtps-cpp, ros-crystal-rmw-implementation, ros-crystal-rmw-opensplice-cpp, ros-crystal-rosidl-typesupport-connext-c, ros-crystal-rosidl-typesupport-connext-cpp, ros-crystal-rosidl-typesupport-opensplice-c, ros-crystal-rosidl-typesupport-opensplice-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-crystal-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-crystal-builtin-interfaces, ros-crystal-rclcpp, ros-crystal-rclcpp-lifecycle, ros-crystal-rosidl-default-generators, ros-crystal-std-msgs, ros-crystal-ros-workspace
+Description: Model-based distributed configuration handling.
