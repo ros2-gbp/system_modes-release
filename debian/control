@@ -1,0 +1,12 @@
+Source: ros-eloquent-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-eloquent-ament-cmake, ros-eloquent-ament-cmake-cppcheck, ros-eloquent-ament-cmake-cpplint, ros-eloquent-ament-cmake-flake8, ros-eloquent-ament-cmake-gmock, ros-eloquent-ament-cmake-gtest, ros-eloquent-ament-cmake-pep257, ros-eloquent-ament-cmake-ros, ros-eloquent-ament-cmake-uncrustify, ros-eloquent-ament-lint-auto, ros-eloquent-builtin-interfaces, ros-eloquent-rclcpp, ros-eloquent-rclcpp-lifecycle, ros-eloquent-rosidl-default-generators, ros-eloquent-std-msgs, ros-eloquent-ros-workspace, ros-eloquent-rmw-connext-cpp, ros-eloquent-rmw-fastrtps-cpp, ros-eloquent-rmw-implementation, ros-eloquent-rmw-opensplice-cpp, ros-eloquent-rosidl-typesupport-connext-c, ros-eloquent-rosidl-typesupport-connext-cpp, ros-eloquent-rosidl-typesupport-opensplice-c, ros-eloquent-rosidl-typesupport-opensplice-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-eloquent-builtin-interfaces, ros-eloquent-rclcpp, ros-eloquent-rclcpp-lifecycle, ros-eloquent-rosidl-default-generators, ros-eloquent-std-msgs, ros-eloquent-ros-workspace
+Description: Model-based distributed configuration handling.
