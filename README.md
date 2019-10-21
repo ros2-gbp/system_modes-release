@@ -1,3 +1,28 @@
+## system_modes (eloquent) - 0.1.5-1
+
+The packages in the `system_modes` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent --track eloquent system_modes --edit` on `Mon, 21 Oct 2019 13:33:32 -0000`
+
+These packages were released:
+- `system_modes`
+- `system_modes_examples`
+
+Version of package(s) in repository `system_modes`:
+
+- upstream repository: https://github.com/micro-ROS/system_modes.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.1.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.0`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## system_modes (dashing) - 0.1.4-1
 
 The packages in the `system_modes` repository were released into the `dashing` distro by running `/usr/bin/bloom-release --rosdistro dashing --track dashing system_modes` on `Mon, 03 Jun 2019 12:37:33 -0000`
