@@ -1,0 +1,12 @@
+Source: ros-dashing-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-dashing-ament-cmake, ros-dashing-ament-cmake-cppcheck, ros-dashing-ament-cmake-cpplint, ros-dashing-ament-cmake-flake8, ros-dashing-ament-cmake-gmock, ros-dashing-ament-cmake-gtest, ros-dashing-ament-cmake-pep257, ros-dashing-ament-cmake-ros, ros-dashing-ament-cmake-uncrustify, ros-dashing-ament-lint-auto, ros-dashing-builtin-interfaces, ros-dashing-rclcpp, ros-dashing-rclcpp-lifecycle, ros-dashing-rosidl-default-generators, ros-dashing-std-msgs, ros-dashing-ros-workspace, ros-dashing-rmw-connext-cpp, ros-dashing-rmw-fastrtps-cpp, ros-dashing-rmw-implementation, ros-dashing-rmw-opensplice-cpp, ros-dashing-rosidl-typesupport-connext-c, ros-dashing-rosidl-typesupport-connext-cpp, ros-dashing-rosidl-typesupport-opensplice-c, ros-dashing-rosidl-typesupport-opensplice-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-dashing-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-dashing-builtin-interfaces, ros-dashing-rclcpp, ros-dashing-rclcpp-lifecycle, ros-dashing-rosidl-default-generators, ros-dashing-std-msgs, ros-dashing-ros-workspace
+Description: Model-based distributed configuration handling.
