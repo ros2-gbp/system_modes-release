@@ -65,8 +65,8 @@ tracks:
     name: upstream
     patches: null
     release_inc: '1'
-    release_repo_url: null
-    release_tag: 0.1.5
+    release_repo_url: https://github.com/microROS/system_modes-release.git
+    release_tag: 0.2.0
     ros_distro: eloquent
     vcs_type: git
     vcs_uri: https://github.com/micro-ROS/system_modes.git
