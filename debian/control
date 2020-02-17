@@ -1,0 +1,12 @@
+Source: ros-dashing-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-dashing-ament-cmake, ros-dashing-ament-cmake-ros, ros-dashing-rclcpp, ros-dashing-rclcpp-lifecycle, ros-dashing-system-modes, ros-dashing-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-dashing-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-dashing-rclcpp, ros-dashing-rclcpp-lifecycle, ros-dashing-system-modes, ros-dashing-ros-workspace
+Description: Simple example system for system_modes package.
