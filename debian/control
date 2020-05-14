@@ -1,0 +1,12 @@
+Source: ros-foxy-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-foxy-ament-cmake, ros-foxy-rclcpp, ros-foxy-rclcpp-lifecycle, ros-foxy-system-modes, ros-foxy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-foxy-rclcpp, ros-foxy-rclcpp-lifecycle, ros-foxy-system-modes, ros-foxy-ros-workspace
+Description: Simple example system for system_modes package.
