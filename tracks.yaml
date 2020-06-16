@@ -114,7 +114,7 @@ tracks:
     last_version: 0.2.0
     name: upstream
     patches: null
-    release_inc: '4'
+    release_inc: '5'
     release_repo_url: https://github.com/microROS/system_modes-release.git
     release_tag: 0.2.0
     ros_distro: rolling
