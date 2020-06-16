@@ -120,5 +120,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/micro-ROS/system_modes.git
-    version: 0.2.0
-    version_saved: :{ask}
+    version: :{ask}
