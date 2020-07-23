@@ -43,7 +43,7 @@ tracks:
     patches: null
     release_inc: '4'
     release_repo_url: null
-    release_tag: :{version}-dashing
+    release_tag: :{ask}
     ros_distro: dashing
     vcs_type: git
     vcs_uri: https://github.com/micro-ROS/system_modes.git
