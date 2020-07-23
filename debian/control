@@ -1,0 +1,12 @@
+Source: ros-foxy-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-program-options-dev, ros-foxy-ament-cmake, ros-foxy-ament-cmake-cppcheck, ros-foxy-ament-cmake-cpplint, ros-foxy-ament-cmake-flake8, ros-foxy-ament-cmake-gmock, ros-foxy-ament-cmake-gtest, ros-foxy-ament-cmake-pep257, ros-foxy-ament-cmake-uncrustify, ros-foxy-ament-lint-auto, ros-foxy-builtin-interfaces, ros-foxy-rclcpp, ros-foxy-rclcpp-lifecycle, ros-foxy-rosidl-default-generators, ros-foxy-std-msgs, ros-foxy-ros-workspace, ros-foxy-rosidl-typesupport-connext-c, ros-foxy-rosidl-typesupport-connext-cpp, ros-foxy-rosidl-typesupport-fastrtps-c, ros-foxy-rosidl-typesupport-fastrtps-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-program-options-dev, ros-foxy-builtin-interfaces, ros-foxy-rclcpp, ros-foxy-rclcpp-lifecycle, ros-foxy-rosidl-default-generators, ros-foxy-std-msgs, ros-foxy-ros-workspace
+Description: Model-based distributed configuration handling.
