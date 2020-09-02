@@ -62,10 +62,11 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
     devel_branch: eloquent
+    last_release: 0.3.0-eloquent
     last_version: 0.3.0
     name: upstream
     patches: null
-    release_inc: '1'
+    release_inc: '2'
     release_repo_url: https://github.com/microROS/system_modes-release.git
     release_tag: 0.3.0-eloquent
     ros_distro: eloquent
