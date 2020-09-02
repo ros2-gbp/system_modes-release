@@ -38,7 +38,7 @@ def generate_launch_description():
             description='Monitor refresh rate in ms'),
         launch_ros.actions.Node(
             package='system_modes',
-            executable='mode_monitor',
+            node_executable='mode_monitor',
             parameters=[{
                 'modelfile': launch.substitutions.LaunchConfiguration('modelfile'),
                 'debug': launch.substitutions.LaunchConfiguration('debug'),

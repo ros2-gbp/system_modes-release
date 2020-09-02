@@ -27,6 +27,6 @@ def generate_launch_description():
     return launch.LaunchDescription([
         launch_ros.actions.Node(
             package='system_modes_examples',
-            executable='drive_base',
+            node_executable='drive_base',
             parameters=[{'modelfile': default_modelfile}],
             output='screen')])
