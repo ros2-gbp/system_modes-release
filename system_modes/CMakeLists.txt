@@ -25,7 +25,6 @@ find_package(rclcpp_lifecycle REQUIRED)
 find_package(rosidl_typesupport_cpp REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(lifecycle_msgs REQUIRED)
-find_package(Boost 1.58 COMPONENTS program_options REQUIRED)
 
 # generate service
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -38,7 +37,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES builtin_interfaces
 )
 
-add_library(mode
+add_library(mode SHARED
   src/system_modes/mode.cpp
   src/system_modes/mode_impl.cpp
   src/system_modes/mode_inference.cpp)
@@ -52,7 +51,6 @@ ament_target_dependencies(mode
   "lifecycle_msgs"
   "rosidl_typesupport_cpp"
   "std_msgs"
-  "Boost"
   "builtin_interfaces"
 )
 #rosidl_target_interfaces(mode
@@ -60,7 +58,7 @@ ament_target_dependencies(mode
 # TODO Should work with the two lines above, but doesn't
 include_directories(../../build/system_modes/rosidl_generator_cpp/)
 link_directories(../../build/system_modes/)
-target_link_libraries(mode system_modes__rosidl_typesupport_cpp boost_program_options)
+target_link_libraries(mode system_modes__rosidl_typesupport_cpp)
 
   # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
@@ -117,6 +115,14 @@ if(BUILD_TESTING)
   configure_file(test/modefiles.h.in ${CMAKE_CURRENT_BINARY_DIR}/system_modes/modefiles.h)
   include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
 
+  ament_add_gtest(test_state_and_mode_struct test/test_state_and_mode_struct.cpp)
+  if(TARGET test_state_and_mode_struct)
+    target_include_directories(test_state_and_mode_struct PUBLIC
+      ${rclcpp_INCLUDE_DIRS}
+    )
+    target_link_libraries(test_state_and_mode_struct mode)
+  endif()
+
   ament_add_gtest(test_default_mode test/test_default_mode.cpp)
   if(TARGET test_default_mode)
     target_include_directories(test_default_mode PUBLIC
@@ -131,6 +137,15 @@ if(BUILD_TESTING)
       ${rclcpp_INCLUDE_DIRS}
     )
     target_link_libraries(test_mode mode)
+  endif()
+
+  ament_add_gtest(test_mode_inference test/test_mode_inference.cpp)
+  if(TARGET test_mode_inference)
+    target_include_directories(test_mode_inference PUBLIC
+      ${rclcpp_INCLUDE_DIRS}
+      ${CMAKE_CURRENT_BINARY_DIR}/system_modes/
+    )
+    target_link_libraries(test_mode_inference mode)
   endif()
 endif()
 
