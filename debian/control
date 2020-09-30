@@ -1,0 +1,12 @@
+Source: ros-rolling-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-cppcheck, ros-rolling-ament-cmake-cpplint, ros-rolling-ament-cmake-flake8, ros-rolling-ament-cmake-gmock, ros-rolling-ament-cmake-gtest, ros-rolling-ament-cmake-pep257, ros-rolling-ament-cmake-uncrustify, ros-rolling-ament-lint-auto, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-system-modes, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-system-modes, ros-rolling-ros-workspace
+Description: Simple example system for system_modes package.
