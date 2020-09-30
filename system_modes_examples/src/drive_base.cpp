@@ -57,14 +57,16 @@ public:
         auto result = rcl_interfaces::msg::SetParametersResult();
         result.successful = true;
         for (auto parameter : parameters) {
-          RCLCPP_INFO(this->get_logger(),
+          RCLCPP_INFO(
+            this->get_logger(),
             "parameter '%s' is now: %s",
             parameter.get_name().c_str(),
             parameter.value_to_string().c_str());
         }
         return result;
       };
-    this->set_on_parameters_set_callback(param_change_callback);
+
+    param_change_callback_handle_ = this->add_on_set_parameters_callback(param_change_callback);
   }
 
   DriveBase(const DriveBase &) = delete;
@@ -101,6 +103,9 @@ public:
 
     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
   }
+
+private:
+  rclcpp::Node::OnSetParametersCallbackHandle::SharedPtr param_change_callback_handle_;
 };
 
 }  // namespace examples
