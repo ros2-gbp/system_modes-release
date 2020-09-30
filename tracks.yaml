@@ -115,8 +115,8 @@ tracks:
     name: upstream
     patches: null
     release_inc: '5'
-    release_repo_url: https://github.com/microROS/system_modes-release.git
-    release_tag: 0.2.0
+    release_repo_url: https://github.com/ros2-gbp/system_modes-release.git
+    release_tag: 0.3.0
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/micro-ROS/system_modes.git
