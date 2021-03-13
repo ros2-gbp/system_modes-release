@@ -1,3 +1,28 @@
+## system_modes (rolling) - 0.4.2-2
+
+The packages in the `system_modes` repository were released into the `rolling` distro by running `/home/cottsay/.local/bin/bloom-release system_modes -r rolling` on `Sat, 13 Mar 2021 02:02:56 -0000`
+
+These packages were released:
+- `system_modes`
+- `system_modes_examples`
+
+Version of package(s) in repository `system_modes`:
+
+- upstream repository: https://github.com/micro-ROS/system_modes.git
+- release repository: https://github.com/ros2-gbp/system_modes-release.git
+- rosdistro version: `0.4.2-1`
+- old version: `0.4.2-1`
+- new version: `0.4.2-2`
+
+Versions of tools used:
+
+- bloom version: `0.10.2`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## system_modes (rolling) - 0.4.2-1
 
 The packages in the `system_modes` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling system_modes` on `Thu, 17 Dec 2020 10:10:21 -0000`
