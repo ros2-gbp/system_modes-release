@@ -1,0 +1,12 @@
+Source: ros-galactic-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ament-cmake-cppcheck, ros-galactic-ament-cmake-cpplint, ros-galactic-ament-cmake-flake8, ros-galactic-ament-cmake-gmock, ros-galactic-ament-cmake-gtest, ros-galactic-ament-cmake-pep257, ros-galactic-ament-cmake-uncrustify, ros-galactic-ament-lint-auto, ros-galactic-rclcpp, ros-galactic-rclcpp-lifecycle, ros-galactic-system-modes, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-rclcpp, ros-galactic-rclcpp-lifecycle, ros-galactic-ros2launch, ros-galactic-system-modes, ros-galactic-ros-workspace
+Description: Simple example system and according launch files for the system_modes package.
