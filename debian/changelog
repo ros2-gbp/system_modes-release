@@ -1,0 +1,14 @@
+ros-galactic-system-modes-msgs (0.7.1-1focal) focal; urgency=high
+
+  * Improved metadata for ROS 2 package releases
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Tue, 21 Apr 2020 22:00:00 -0000
+
+ros-galactic-system-modes-msgs (0.7.0-1focal) focal; urgency=high
+
+  * Launch tests now using launch_ros node action https://github.com/micro-ROS/system_modes/pull/72
+  * Introduced separate interface package, system_modes_msgs https://github.com/micro-ROS/system_modes/pull/74
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Tue, 21 Apr 2020 22:00:00 -0000
+
+

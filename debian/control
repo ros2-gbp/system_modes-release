@@ -1,0 +1,12 @@
+Source: ros-galactic-system-modes-msgs
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ament-cmake-cppcheck, ros-galactic-ament-lint-auto, ros-galactic-builtin-interfaces, ros-galactic-rosidl-default-generators, ros-galactic-ros-workspace, ros-galactic-rosidl-typesupport-fastrtps-c, ros-galactic-rosidl-typesupport-fastrtps-cpp
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-galactic-system-modes-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-builtin-interfaces, ros-galactic-rosidl-default-generators, ros-galactic-ros-workspace
+Description: Interface package, containing message definitions and service definitions for the system modes package.
