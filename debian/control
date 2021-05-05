@@ -1,0 +1,12 @@
+Source: ros-rolling-system-modes-msgs
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-cppcheck, ros-rolling-ament-cmake-cpplint, ros-rolling-ament-lint-auto, ros-rolling-ament-lint-common, ros-rolling-rosidl-default-generators, ros-rolling-ros-workspace, ros-rolling-rosidl-typesupport-fastrtps-c, ros-rolling-rosidl-typesupport-fastrtps-cpp
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-rolling-system-modes-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-ament-cmake-cppcheck, ros-rolling-ament-cmake-cpplint, ros-rolling-rosidl-default-runtime, ros-rolling-ros-workspace
+Description: Interface package, containing message definitions and service definitions for the system modes package.
