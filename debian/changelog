@@ -1,0 +1,7 @@
+ros-galactic-launch-system-modes (0.8.0-1focal) focal; urgency=high
+
+  * Launch integration, i.e. launch actions, events, and event handlers for system modes
+
+ -- Arne Nordmann <arne.nordmann@de.bosch.com>  Tue, 21 Apr 2020 22:00:00 -0000
+
+
