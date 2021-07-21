@@ -1,62 +1,44 @@
-# ROS 2 System Modes
+General information about this repository, including legal information, build instructions and known issues/limitations, can be found in the [README](../README.md) of the repository root.
 
-[![License](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://github.com/micro-ROS/system_modes/blob/master/LICENSE)
-[![Build status](https://build.ros2.org/job/Ddev__system_modes__ubuntu_bionic_amd64/badge/icon?subject=Build%20farm%3A%20Dashing)](https://build.ros2.org/job/Ddev__system_modes__ubuntu_bionic_amd64/)
-[![Build status](http://build.ros2.org/job/Fdev__system_modes__ubuntu_focal_amd64/badge/icon?subject=Build%20farm%3A%20Foxy)](http://build.ros2.org/job/Fdev__system_modes__ubuntu_focal_amd64/)
-[![Build status](http://build.ros2.org/job/Gdev__system_modes__ubuntu_focal_amd64/badge/icon?subject=Build%20farm%3A%20Galaxy)](http://build.ros2.org/job/Gdev__system_modes__ubuntu_focal_amd64/)
-[![Build status](http://build.ros2.org/job/Rdev__system_modes__ubuntu_focal_amd64/badge/icon?subject=Build%20farm%3A%20Rolling)](http://build.ros2.org/job/Rdev__system_modes__ubuntu_focal_amd64/)
-[![Build status](https://github.com/micro-ROS/system_modes/workflows/Build%20action%3A%20Foxy%20%2B%20Rolling/badge.svg)](https://github.com/micro-ROS/system_modes/actions)
-[![Code coverage](https://codecov.io/gh/micro-ROS/system_modes/branch/master/graph/badge.svg)](https://codecov.io/gh/micro-ROS/system_modes)
+# The launch_system_modes package
 
-This repository explores a system modes concept that is implemented for ROS 2 in these packages:
-* [system_modes_msgs](./system_modes_msgs/) provides the message types and services for system modes
-* [system_modes](./system_modes/) provides a library for system mode inference, a mode manager, and a mode monitor
-* [system_modes_examples](./system_modes_examples/) implements a simple example
-* [launch_system_modes](./launch_system_modes/) launch actions, events, and event handlers for system modes
-* [test_launch_system_modes](./test_launch_system_modes/) launch test for the launch_system_modes` package
+This [ROS 2](https://index.ros.org/doc/ros2/) package provides a launch actions, events, and event handlers for the use of the [system_modes](../system_modes/) package.
 
-For further information, please contact [Arne Nordmann](https://github.com/norro) or [Ralph Lange](https://github.com/ralph-lange).
+General information about this repository, including legal information, project context, build instructions and known issues/limitations, are given in [README.md](../README.md) in the repository root.
 
-## Purpose of the Project
+## Launch System Modes Package
 
-This software is not ready for production use. It has neither been developed nor
-tested for a specific use case. However, the license conditions of the
-applicable Open Source licenses allow you to adapt the software to your needs.
-Before using it in a safety relevant setting, make sure that the software
-fulfills your requirements and adjust it according to any applicable safety
-standards, e.g., ISO 26262.
+The actions, events, and event handlers implemented for system modes are:
 
-## How to Build, Test, Install, and Use
+### Actions
 
-After you cloned this repository into your ROS 2 workspace folder, you may build and install the [system_modes](./system_modes/) package and the [system_modes_examples](./system_modes_examples/) package using colcon:
-$ `colcon build --packages-select-regex system_modes`
+Two launch actions are implemented for system modes:
 
-Have a look at the [system_modes_examples](./system_modes_examples/) documentation to try your installation.
+* `System`: Declares a *system*, consisting of further system parts, allowing system mode specific launch events and event handlers.
+* `Node`: Declares a *node*, i.e. a lifecycle node with system modes. It inherits from the [launch_ros/lifecycle_node](https://github.com/ros2/launch_ros/blob/master/launch_ros/launch_ros/actions/lifecycle_node.py) action and allows further system mode specific events and event handlers.
 
-For using this package and designing system modes for your system, please refer to the [How to Apply](./system_modes/README.md#how-to-apply) section.
+### Events
 
-## License
+* `ChangeMode`: Trigger a mode change in a `System` or `Node`
+* `ChangeState`: Trigger a state transition in a `System`, since [launch_ros/ChangeState](https://github.com/ros2/launch_ros/blob/master/launch_ros/launch_ros/events/lifecycle/change_state.py) only works for lifecycle nodes, not systems.
+* `ModeChanged`: Emitted when a `System` or `Node` changed its mode.
+* `StateTransition`: Emitted when a `System` changed its state, since [launch_ros/StateTransition](https://github.com/ros2/launch_ros/blob/master/launch_ros/launch_ros/events/lifecycle/state_transition.py) only works for lifecycle nodes, not systems.
 
-ROS 2 System Modes are open-sourced under the Apache-2.0 license. See the
-[LICENSE](LICENSE) file for details.
+### Event Handlers
 
-For a list of other open-source components included in ROS 2 system_modes,
-see the file [3rd-party-licenses.txt](3rd-party-licenses.txt).
+* `OnModeChanged`: Event handler for mode changes of a `System` or `Node`
+* `OnStateTransition`: Event handler for state transitions of a `System`
 
-## Quality assurance
+## Examples
 
-The colcon_test tool is used for quality assurances, which includes cpplint, uncrustify, flake8, xmllint and various other tools.
+Two examples show the use of launch_system_modes:
 
-Unit tests based on [gtest](https://github.com/google/googletest) are located in the [./system_modes/test](system_modes/test) folder.
-
-## Known Issues/Limitations
-
-Please notice the following issues/limitations:
-
-* Currently, (sub-)systems managed by the mode manager are not recognized by the `ros2 lifecycle` tool (*"Node not found"*). So to trigger lifecycle transitions in (sub-)systems, you have to go with the `ros2 service call` tool. Check the [system_modes_examples](./system_modes_examples/) documentation for example calls.
-* The [Error Handling and Rules](./system_modes/README.md#error-handling-and-rules-experimental) feature is still experimental and might be subject to major changes. However, if no rules are specified in the model file, this feature is not used.
-* The mode inference and the error handling and rules feature do not work as intended if some of the involved nodes are non-lifecycle nodes.
-
-## Acknowledgments
-
-This activity has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement n° 780785).
+1. [system_modes_examples/launch/example_system_start_drive_base.launch.py](../system_modes_examples/launch/example_system_start_drive_base.launch.py) starts an *actuation* system with two system parts, the nodes *drive_base* and *manipulator*. It will then:
+    1. trigger a *configure* transition for the *drive_base* system part ([lines 62 - 65](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L62-L65))
+    1. a state change handler ([lines 86 - 90](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L86-L90)) notices the successful transition and triggers an *activate* transition for the *drive_base* system part ([lines 67 - 71](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L67-L71))
+    1. another state change handler ([lines 92 - 96](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L92-L96)) notices the successful transition to *active* and triggers a mode change of the *drive_base* system part to its default mode ([lines 73 - 77](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L73-L77))
+    1. a mode change handler ([lines 98 - 102](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L98-L102)) notices the successful transition to the default mode and triggers a mode change of the *drive_base* system part to its *FAST* mode ([lines 79 - 83](../system_modes_examples/launch/example_system_start_drive_base.launch.py#L79-L83))
+1. [system_modes_examples/launch/example_system_started.launch.py](../system_modes_examples/launch/example_system_started.launch.py) starts the same system, but uses according events and event handlers for the *system* instead. It will:
+    1. trigger a *configure* transition for the *actuation* system ([lines 60 - 63](../system_modes_examples/launch/example_system_started.launch.py#L62-L65))
+    1. a state change handler ([lines 78 - 82](../system_modes_examples/launch/example_system_started.launch.py#L78-L82)) notices the successful transition and triggers an *activate* transition for the *actuation* system ([lines 65 - 69](../system_modes_examples/launch/example_system_started.launch.py#L65-L69))
+    1. a mode change handler ([lines 84 - 88](../system_modes_examples/launch/example_system_started.launch.py#L84-L88)) notices the successful transition to the default mode and triggers a mode change of the *actuation* system to its *PERMORMANCE* mode ([lines 71 - 75](../system_modes_examples/launch/example_system_started.launch.py#L71-L75))
