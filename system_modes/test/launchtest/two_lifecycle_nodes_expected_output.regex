@@ -1,3 +1,0 @@
-Transition \/(A|foo\/B):configure
-Parameter \/foo\/B:bar:ONE
-Parameter \/A:foo:0\.2
