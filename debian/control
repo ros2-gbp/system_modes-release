@@ -1,0 +1,13 @@
+Source: ros-rolling-test-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-flake8, ros-rolling-ament-cmake-pep257, ros-rolling-ament-index-python, ros-rolling-ament-lint-auto, ros-rolling-builtin-interfaces, ros-rolling-launch-system-modes, ros-rolling-launch-testing-ament-cmake, ros-rolling-launch-testing-ros, ros-rolling-lifecycle-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-system-modes, ros-rolling-system-modes-examples, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-rolling-test-launch-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-builtin-interfaces, ros-rolling-launch-system-modes, ros-rolling-lifecycle-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-system-modes, ros-rolling-system-modes-examples, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace
+Description: Launch tests for the launch_system_modes package, i.e.
+ launch actions, events, and event handlers for system modes.
