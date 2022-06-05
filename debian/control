@@ -1,0 +1,12 @@
+Source: ros-humble-system-modes-msgs
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-cmake-cppcheck <!nocheck>, ros-humble-ament-cmake-cpplint <!nocheck>, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-rosidl-default-generators, ros-humble-ros-workspace, ros-humble-rosidl-typesupport-fastrtps-c, ros-humble-rosidl-typesupport-fastrtps-cpp
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-humble-system-modes-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-rosidl-default-runtime, ros-humble-ros-workspace
+Description: Interface package, containing message definitions and service definitions for the system modes package.
