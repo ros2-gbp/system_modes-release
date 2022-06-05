@@ -1,0 +1,12 @@
+Source: ros-humble-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-cmake-cppcheck <!nocheck>, ros-humble-ament-cmake-cpplint <!nocheck>, ros-humble-ament-cmake-flake8 <!nocheck>, ros-humble-ament-cmake-gmock <!nocheck>, ros-humble-ament-cmake-gtest <!nocheck>, ros-humble-ament-cmake-pep257 <!nocheck>, ros-humble-ament-cmake-uncrustify <!nocheck>, ros-humble-ament-lint-auto <!nocheck>, ros-humble-rclcpp, ros-humble-rclcpp-lifecycle, ros-humble-system-modes, ros-humble-system-modes-msgs, ros-humble-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-humble-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-launch, ros-humble-launch-system-modes, ros-humble-rclcpp, ros-humble-rclcpp-lifecycle, ros-humble-ros2launch, ros-humble-system-modes, ros-humble-system-modes-msgs, ros-humble-ros-workspace
+Description: Example systems and according launch files for the system_modes package.
