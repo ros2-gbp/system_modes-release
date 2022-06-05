@@ -1,0 +1,13 @@
+Source: ros-humble-test-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-cmake-flake8 <!nocheck>, ros-humble-ament-cmake-pep257 <!nocheck>, ros-humble-ament-index-python <!nocheck>, ros-humble-ament-lint-auto <!nocheck>, ros-humble-builtin-interfaces, ros-humble-launch-system-modes, ros-humble-launch-testing-ament-cmake <!nocheck>, ros-humble-launch-testing-ros <!nocheck>, ros-humble-lifecycle-msgs, ros-humble-rclcpp, ros-humble-rclcpp-lifecycle, ros-humble-system-modes, ros-humble-system-modes-examples, ros-humble-system-modes-msgs, ros-humble-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-humble-test-launch-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-builtin-interfaces, ros-humble-launch-system-modes, ros-humble-lifecycle-msgs, ros-humble-rclcpp, ros-humble-rclcpp-lifecycle, ros-humble-system-modes, ros-humble-system-modes-examples, ros-humble-system-modes-msgs, ros-humble-ros-workspace
+Description: Launch tests for the launch_system_modes package, i.e.
+ launch actions, events, and event handlers for system modes.
