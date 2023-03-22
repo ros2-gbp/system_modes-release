@@ -1,0 +1,111 @@
+ros-rolling-system-modes (0.9.0-4jammy) jammy; urgency=high
+
+  * More flexibility in specifying the default mode, any mode can be now default mode
+    https://github.com/micro-ROS/system_modes/issues/69
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Tue, 21 Jul 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.8.0-4jammy) jammy; urgency=high
+
+  * Launch integration, i.e. launch actions, events, and event handlers for system modes
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Wed, 22 Apr 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.7.1-4jammy) jammy; urgency=high
+
+  * Improved metadata for ROS 2 package releases
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Wed, 22 Apr 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.7.0-4jammy) jammy; urgency=high
+
+  * Launch tests now using launch_ros node action https://github.com/micro-ROS/system_modes/pull/72
+  * Introduced separate interface package, system_modes_msgs https://github.com/micro-ROS/system_modes/pull/74
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Wed, 22 Apr 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.6.0-4jammy) jammy; urgency=high
+
+  * Introduced mode observer https://github.com/micro-ROS/system_modes/issues/59
+  * Mode manager prevents redundant mode changes https://github.com/micro-ROS/system_modes/pull/67
+  * Minor bugfix in inference
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Mon, 16 Mar 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.5.0-4jammy) jammy; urgency=high
+
+  * Atomic parameter setting https://github.com/micro-ROS/system_modes/issues/59
+  * Bug fixing
+  * More tests
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Mon, 16 Mar 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.4.2-4jammy) jammy; urgency=high
+
+  * Error handling and rules feature no longer experimental
+  * Fixed bugs in monitor and tests
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 17 Dec 2020 08:00:00 -0000
+
+ros-rolling-system-modes (0.4.1-4jammy) jammy; urgency=high
+
+  * Include experimental error handling and rules feature
+  * https://github.com/micro-ROS/system_modes/issues/13
+  * CI for ubuntu 20.04 ROS 2 rolling
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 29 Oct 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.4.0-4jammy) jammy; urgency=high
+
+  * publish inferred state and mode transitions
+  * https://github.com/micro-ROS/system_modes/issues/42
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Wed, 30 Sep 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.3.0-4jammy) jammy; urgency=high
+
+  * removed boost dependencies (was: program options)
+  * changed mode service specifications (less redundancy)
+  * https://github.com/micro-ROS/system_modes/issues/24
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 23 Jul 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.2.3-4jammy) jammy; urgency=high
+
+  * improved StateAndMode struct
+  * testing
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 23 Jul 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.2.2-4jammy) jammy; urgency=high
+
+  * introduced StateAndMode struct to bundle lifecycle state and system mode
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Mon, 13 Jul 2020 07:00:00 -0000
+
+ros-rolling-system-modes (0.2.0-4jammy) jammy; urgency=high
+
+  * integration with ROS 2 launch
+  * updated docs
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 13 Feb 2020 08:00:00 -0000
+
+ros-rolling-system-modes (0.1.6-4jammy) jammy; urgency=high
+
+  * fixed QoS configuration for parameter event subscribers
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Thu, 31 Oct 2019 07:00:00 -0000
+
+ros-rolling-system-modes (0.1.2-4jammy) jammy; urgency=high
+
+  * fixed dependencies in package.xml
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Mon, 18 Mar 2019 07:00:00 -0000
+
+ros-rolling-system-modes (0.1.1-4jammy) jammy; urgency=high
+
+  * first public release for ROS 2 system modes
+
+ -- Arne Nordmann <arne.nordmann@bosch.com>  Fri, 08 Mar 2019 08:00:00 -0000
+
+
