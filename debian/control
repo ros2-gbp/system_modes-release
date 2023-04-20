@@ -1,0 +1,12 @@
+Source: ros-iron-system-modes-msgs
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-cmake-cppcheck <!nocheck>, ros-iron-ament-cmake-cpplint <!nocheck>, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-rosidl-default-generators, ros-iron-ros-workspace, ros-iron-rosidl-typesupport-fastrtps-c, ros-iron-rosidl-typesupport-fastrtps-cpp
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-iron-system-modes-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-rosidl-default-runtime, ros-iron-ros-workspace
+Description: Interface package, containing message definitions and service definitions for the system modes package.
