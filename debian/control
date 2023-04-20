@@ -1,0 +1,13 @@
+Source: ros-iron-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-cmake-cppcheck <!nocheck>, ros-iron-ament-cmake-cpplint <!nocheck>, ros-iron-ament-cmake-flake8 <!nocheck>, ros-iron-ament-cmake-gmock <!nocheck>, ros-iron-ament-cmake-gtest <!nocheck>, ros-iron-ament-cmake-pep257 <!nocheck>, ros-iron-ament-cmake-uncrustify <!nocheck>, ros-iron-ament-index-python <!nocheck>, ros-iron-ament-lint-auto <!nocheck>, ros-iron-builtin-interfaces, ros-iron-launch-testing-ament-cmake <!nocheck>, ros-iron-launch-testing-ros <!nocheck>, ros-iron-rclcpp, ros-iron-rclcpp-lifecycle, ros-iron-ros2run <!nocheck>, ros-iron-system-modes-msgs, ros-iron-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-iron-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-builtin-interfaces, ros-iron-launch-ros, ros-iron-rclcpp, ros-iron-rclcpp-lifecycle, ros-iron-system-modes-msgs, ros-iron-ros-workspace
+Description: The system modes concept assumes that a robotics system is built from components with a lifecycle.
+ It adds a notion of (sub-)systems, hiararchically grouping these nodes, as well as a notion of modes that determine the configuration of these nodes and (sub-)systems in terms of their parameter values.
