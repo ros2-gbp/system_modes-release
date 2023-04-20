@@ -1,0 +1,13 @@
+Source: ros-iron-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@de.bosch.com>
+Build-Depends: debhelper (>= 9.0.0), python3-importlib-metadata, python3-pytest <!nocheck>, python3-yaml, ros-iron-ament-copyright <!nocheck>, ros-iron-ament-flake8 <!nocheck>, ros-iron-ament-index-python, ros-iron-ament-pep257 <!nocheck>, ros-iron-launch, ros-iron-osrf-pycommon, ros-iron-rclpy, ros-iron-system-modes-msgs, ros-iron-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-launch-system-modes
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-importlib-metadata, python3-yaml, ros-iron-ament-index-python, ros-iron-launch, ros-iron-osrf-pycommon, ros-iron-rclpy, ros-iron-system-modes-msgs, ros-iron-ros-workspace
+Description: System modes specific extensions to the launch tool, i.e.
+ launch actions, events, and event handlers for system modes.

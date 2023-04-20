@@ -1,0 +1,14 @@
+ros-iron-launch-system-modes (0.9.0-5jammy) jammy; urgency=high
+
+  * More flexibility in specifying the default mode, any mode can be now default mode
+    https://github.com/micro-ROS/system_modes/issues/69
+
+ -- Arne Nordmann <arne.nordmann@de.bosch.com>  Mon, 20 Jul 2020 16:00:00 -0000
+
+ros-iron-launch-system-modes (0.8.0-5jammy) jammy; urgency=high
+
+  * Launch integration, i.e. launch actions, events, and event handlers for system modes
+
+ -- Arne Nordmann <arne.nordmann@de.bosch.com>  Tue, 21 Apr 2020 16:00:00 -0000
+
+
