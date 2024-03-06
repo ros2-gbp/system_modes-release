@@ -1,0 +1,13 @@
+Source: ros-rolling-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@de.bosch.com>
+Build-Depends: debhelper (>= 9.0.0), python3-ament-copyright <!nocheck>, python3-ament-flake8 <!nocheck>, python3-ament-index, python3-ament-pep257 <!nocheck>, python3-importlib-metadata, python3-osrf-pycommon, python3-pytest <!nocheck>, python3-yaml, ros-rolling-launch, ros-rolling-rclpy, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-launch-system-modes
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-ament-index, python3-importlib-metadata, python3-osrf-pycommon, python3-yaml, ros-rolling-launch, ros-rolling-rclpy, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace
+Description: System modes specific extensions to the launch tool, i.e.
+ launch actions, events, and event handlers for system modes.
