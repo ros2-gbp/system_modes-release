@@ -1,0 +1,12 @@
+Source: ros-jazzy-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, ament-cmake-cppcheck <!nocheck>, ament-cmake-cpplint <!nocheck>, ament-cmake-flake8 <!nocheck>, ament-cmake-googletest <!nocheck>, ament-cmake-pep257 <!nocheck>, ament-cmake-uncrustify <!nocheck>, ament-lint <!nocheck>, ros-jazzy-rclcpp, ros-jazzy-rclcpp-lifecycle, ros-jazzy-system-modes, ros-jazzy-system-modes-msgs, ros-jazzy-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-launch, ros-jazzy-launch-system-modes, ros-jazzy-rclcpp, ros-jazzy-rclcpp-lifecycle, ros-jazzy-ros2launch, ros-jazzy-system-modes, ros-jazzy-system-modes-msgs, ros-jazzy-ros-workspace
+Description: Example systems and according launch files for the system_modes package.
