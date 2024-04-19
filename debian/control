@@ -1,0 +1,13 @@
+Source: ros-jazzy-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@de.bosch.com>
+Build-Depends: debhelper (>= 9.0.0), python3-importlib-metadata, python3-pytest <!nocheck>, python3-yaml, ros-jazzy-ament-copyright <!nocheck>, ros-jazzy-ament-flake8 <!nocheck>, ros-jazzy-ament-index-python, ros-jazzy-ament-pep257 <!nocheck>, ros-jazzy-launch, ros-jazzy-osrf-pycommon, ros-jazzy-rclpy, ros-jazzy-system-modes-msgs, ros-jazzy-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-launch-system-modes
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-importlib-metadata, python3-yaml, ros-jazzy-ament-index-python, ros-jazzy-launch, ros-jazzy-osrf-pycommon, ros-jazzy-rclpy, ros-jazzy-system-modes-msgs, ros-jazzy-ros-workspace
+Description: System modes specific extensions to the launch tool, i.e.
+ launch actions, events, and event handlers for system modes.
