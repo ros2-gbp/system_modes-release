@@ -1,0 +1,12 @@
+Source: ros-kilted-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ament-cmake-cppcheck <!nocheck>, ros-kilted-ament-cmake-cpplint <!nocheck>, ros-kilted-ament-cmake-flake8 <!nocheck>, ros-kilted-ament-cmake-gmock <!nocheck>, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-ament-cmake-pep257 <!nocheck>, ros-kilted-ament-cmake-uncrustify <!nocheck>, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-rclcpp, ros-kilted-rclcpp-lifecycle, ros-kilted-system-modes, ros-kilted-system-modes-msgs, ros-kilted-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-kilted-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-launch, ros-kilted-launch-system-modes, ros-kilted-rclcpp, ros-kilted-rclcpp-lifecycle, ros-kilted-ros2launch, ros-kilted-system-modes, ros-kilted-system-modes-msgs, ros-kilted-ros-workspace
+Description: Example systems and according launch files for the system_modes package.
