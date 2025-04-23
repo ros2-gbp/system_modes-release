@@ -1,0 +1,13 @@
+Source: ros-kilted-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ament-cmake-cppcheck <!nocheck>, ros-kilted-ament-cmake-cpplint <!nocheck>, ros-kilted-ament-cmake-flake8 <!nocheck>, ros-kilted-ament-cmake-gmock <!nocheck>, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-ament-cmake-pep257 <!nocheck>, ros-kilted-ament-cmake-uncrustify <!nocheck>, ros-kilted-ament-index-python <!nocheck>, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-builtin-interfaces, ros-kilted-launch-testing-ament-cmake <!nocheck>, ros-kilted-launch-testing-ros <!nocheck>, ros-kilted-rclcpp, ros-kilted-rclcpp-lifecycle, ros-kilted-ros2run <!nocheck>, ros-kilted-system-modes-msgs, ros-kilted-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-kilted-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-builtin-interfaces, ros-kilted-launch-ros, ros-kilted-rclcpp, ros-kilted-rclcpp-lifecycle, ros-kilted-system-modes-msgs, ros-kilted-ros-workspace
+Description: The system modes concept assumes that a robotics system is built from components with a lifecycle.
+ It adds a notion of (sub-)systems, hiararchically grouping these nodes, as well as a notion of modes that determine the configuration of these nodes and (sub-)systems in terms of their parameter values.
