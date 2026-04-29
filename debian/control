@@ -1,0 +1,13 @@
+Source: ros-rolling-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-cppcheck <!nocheck>, ros-rolling-ament-cmake-cpplint <!nocheck>, ros-rolling-ament-cmake-flake8 <!nocheck>, ros-rolling-ament-cmake-gmock <!nocheck>, ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-cmake-pep257 <!nocheck>, ros-rolling-ament-cmake-uncrustify <!nocheck>, ros-rolling-ament-index-python <!nocheck>, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-builtin-interfaces, ros-rolling-launch-testing-ament-cmake <!nocheck>, ros-rolling-launch-testing-ros <!nocheck>, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-ros2run <!nocheck>, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-rolling-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-builtin-interfaces, ros-rolling-launch-ros, ros-rolling-rclcpp, ros-rolling-rclcpp-lifecycle, ros-rolling-system-modes-msgs, ros-rolling-ros-workspace
+Description: The system modes concept assumes that a robotics system is built from components with a lifecycle.
+ It adds a notion of (sub-)systems, hiararchically grouping these nodes, as well as a notion of modes that determine the configuration of these nodes and (sub-)systems in terms of their parameter values.
