@@ -1,0 +1,13 @@
+Source: ros-lyrical-launch-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@de.bosch.com>
+Build-Depends: debhelper (>= 9.0.0), python3-importlib-metadata, python3-pytest <!nocheck>, python3-yaml, ros-lyrical-ament-copyright <!nocheck>, ros-lyrical-ament-flake8 <!nocheck>, ros-lyrical-ament-index-python, ros-lyrical-ament-pep257 <!nocheck>, ros-lyrical-launch, ros-lyrical-osrf-pycommon, ros-lyrical-rclpy, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://index.ros.org/p/launch_system_modes/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-launch-system-modes
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-importlib-metadata, python3-yaml, ros-lyrical-ament-index-python, ros-lyrical-launch, ros-lyrical-osrf-pycommon, ros-lyrical-rclpy, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace
+Description: System modes specific extensions to the launch tool, i.e.
+ launch actions, events, and event handlers for system modes.
