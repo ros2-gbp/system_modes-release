@@ -1,0 +1,12 @@
+Source: ros-lyrical-system-modes-examples
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-cppcheck <!nocheck>, ros-lyrical-ament-cmake-cpplint <!nocheck>, ros-lyrical-ament-cmake-flake8 <!nocheck>, ros-lyrical-ament-cmake-gmock <!nocheck>, ros-lyrical-ament-cmake-gtest <!nocheck>, ros-lyrical-ament-cmake-pep257 <!nocheck>, ros-lyrical-ament-cmake-uncrustify <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-rclcpp, ros-lyrical-rclcpp-lifecycle, ros-lyrical-system-modes, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-system-modes-examples
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-launch, ros-lyrical-launch-system-modes, ros-lyrical-rclcpp, ros-lyrical-rclcpp-lifecycle, ros-lyrical-ros2launch, ros-lyrical-system-modes, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace
+Description: Example systems and according launch files for the system_modes package.
