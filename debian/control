@@ -1,0 +1,13 @@
+Source: ros-lyrical-system-modes
+Section: misc
+Priority: optional
+Maintainer: Arne Nordmann <arne.nordmann@bosch.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-cppcheck <!nocheck>, ros-lyrical-ament-cmake-cpplint <!nocheck>, ros-lyrical-ament-cmake-flake8 <!nocheck>, ros-lyrical-ament-cmake-gmock <!nocheck>, ros-lyrical-ament-cmake-gtest <!nocheck>, ros-lyrical-ament-cmake-pep257 <!nocheck>, ros-lyrical-ament-cmake-uncrustify <!nocheck>, ros-lyrical-ament-index-python <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-builtin-interfaces, ros-lyrical-launch-testing-ament-cmake <!nocheck>, ros-lyrical-launch-testing-ros <!nocheck>, ros-lyrical-rclcpp, ros-lyrical-rclcpp-lifecycle, ros-lyrical-ros2run <!nocheck>, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace
+Homepage: https://micro.ros.org/docs/concepts/client_library/lifecycle_and_system_modes/
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-system-modes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-builtin-interfaces, ros-lyrical-launch-ros, ros-lyrical-rclcpp, ros-lyrical-rclcpp-lifecycle, ros-lyrical-system-modes-msgs, ros-lyrical-ros-workspace
+Description: The system modes concept assumes that a robotics system is built from components with a lifecycle.
+ It adds a notion of (sub-)systems, hiararchically grouping these nodes, as well as a notion of modes that determine the configuration of these nodes and (sub-)systems in terms of their parameter values.
